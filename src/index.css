@@ -262,3 +262,330 @@ button:hover {
     border-radius: 18px;
   }
 }
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #71806a;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.products-header h1,
+.form-header h1 {
+  margin-bottom: 12px;
+}
+
+.products-header p {
+  margin-bottom: 0;
+}
+
+.product-count {
+  flex-shrink: 0;
+
+  padding: 10px 16px;
+
+  background-color: #eee4d1;
+
+  color: #5c4639;
+
+  border-radius: 20px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.products-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+
+  gap: 22px;
+}
+
+/* =========================================================
+   TARJETA DE PRODUCTO
+   ========================================================= */
+
+.product-card {
+  overflow: hidden;
+
+  background-color: #fffdf8;
+
+  border: 1px solid #eadcc5;
+
+  border-radius: 18px;
+
+  box-shadow: 0 6px 18px rgba(63, 48, 40, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(63, 48, 40, 0.13);
+}
+
+.product-image {
+  display: block;
+
+  width: 100%;
+  height: 190px;
+
+  object-fit: cover;
+
+  background-color: #eee4d1;
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-category {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  padding: 5px 9px;
+
+  background-color: #e7eee2;
+
+  color: #5d6c57;
+
+  border-radius: 10px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.product-content h2 {
+  margin: 5px 0 10px;
+
+  color: #48342b;
+
+  font-size: 1.15rem;
+}
+
+.product-content p {
+  display: -webkit-box;
+
+  margin: 0 0 18px;
+
+  overflow: hidden;
+
+  color: #756359;
+
+  font-size: 0.9rem;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.product-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #eee4d1;
+}
+
+.product-footer strong {
+  color: #a87531;
+
+  font-size: 1.15rem;
+}
+
+.product-footer span {
+  color: #6d5a4d;
+
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.status-message {
+  padding: 25px;
+
+  background-color: #f1eadc;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.status-message.error {
+  background-color: #f3e3d8;
+
+  color: #8a513d;
+}
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+.form-header {
+  margin-bottom: 30px;
+}
+
+.order-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  max-width: 750px;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group label {
+  color: #4f3b31;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  background-color: #fffdf8;
+
+  color: #3f3028;
+
+  border: 1px solid #d9cbb5;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #71806a;
+
+  box-shadow: 0 0 0 3px rgba(113, 128, 106, 0.12);
+}
+
+.submit-button {
+  align-self: flex-start;
+
+  margin-top: 5px;
+
+  background-color: #71806a;
+}
+
+.submit-button:hover {
+  background-color: #5d6c57;
+}
+
+/* =========================================================
+   MENSAJE DE ÉXITO
+   ========================================================= */
+
+.success-message {
+  max-width: 750px;
+
+  margin-top: 25px;
+
+  padding: 18px 20px;
+
+  background-color: #e7eee2;
+
+  border-left: 5px solid #71806a;
+
+  border-radius: 10px;
+
+  color: #4f604b;
+}
+
+.success-message strong {
+  font-size: 1.05rem;
+}
+
+.success-message p {
+  margin-bottom: 0;
+
+  color: #5d6c57;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .products-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
