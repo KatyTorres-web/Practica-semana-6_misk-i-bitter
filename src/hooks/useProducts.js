@@ -16,19 +16,23 @@ function useProducts() {
 
         const products = await getProducts(controller.signal);
 
-        setData(products);
+        // El estado se actualiza solo cuando la petición finaliza correctamente.
+        // El cleanup cancela la solicitud si el componente se desmonta.
+        if (!controller.signal.aborted) {
+          setData(products);
+        }
       } catch (error) {
-        if (error.name === "CanceledError") {
+        if (error.name === "CanceledError" || error.name === "AbortError") {
           return;
         }
 
-        if (error.name === "AbortError") {
-          return;
+        if (!controller.signal.aborted) {
+          setError("No fue posible cargar los productos.");
         }
-
-        setError("No fue posible cargar los productos.");
       } finally {
-        setLoading(false);
+        if (!controller.signal.aborted) {
+          setLoading(false);
+        }
       }
     }
 
